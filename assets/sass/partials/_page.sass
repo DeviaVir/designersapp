@@ -1,0 +1,208 @@
+@import compass/css3
+
+//-----------------------------------------------
+// The following html5-boilerplate styles should
+// probably be customized for each site
+//-----------------------------------------------
+body, select, input, textarea
+	color: $font-color
+	// Set your base font here, to apply evenly
+	font-family: $base-font-family
+
+//-----------------------------------
+// Add your own custom styles below
+//-----------------------------------
+
+html, body
+	height: 100%
+
+body
+	margin: 0
+	padding: 0
+	background: #4163bd
+	visibility: hidden
+	
+	+animate( bounceInDown, 1s, 1s )
+	
+*
+	margin: 0
+	
+.page-background
+	background: transparent
+	position: absolute
+	top: 0 
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: -1
+	overflow: hidden
+	display: block
+	
+	pointer-events: none
+	@include user-select( none )
+	
+	img
+		display: block
+		text-decoration: none
+		border: 0
+		outline: 0
+	
+#container
+	position: relative
+	z-index: 1000
+	min-height: 100%
+	height: auto !important
+	height: 100%
+	
+header
+	padding: 100px 0
+	
+	h1,
+	h3
+		margin: 0
+		padding: 0
+		font:
+			family: $base-font-family
+			weight: 300
+		color: white
+		@include text-shadow( 0 1px 3px rgba( 0, 1, 1, 0.4 ) )
+		text-align: center
+		display: block
+		
+	h1
+		font-size: 42px
+		
+	h3
+		font-size: 18px
+		margin-top: 15px
+
+#main
+	section
+		article
+			&.designers
+				width: 578px
+				margin: 0 auto
+				
+				ul
+					margin: 0
+					padding: 0
+					list-style: none
+					position: relative
+					
+					li
+						float: left
+						width: 100px
+						margin-right: 25px
+						margin-left: 25px
+						position: relative
+						
+						&:last-child
+							margin-right: 0
+							
+						&:hover
+							.hover
+								display: block
+								+animate( fadeInUp, 1s, 0.2s )
+							
+						.hover
+							background: transparent url( '../img/hover.png' ) no-repeat 0 0
+							display: none
+							+animate( fadeOutUp, 1s, 0.2s )
+							width: 200px
+							height: 94px
+							position: absolute
+							left: 50%
+							margin-left: -110px
+							top: -94px
+							
+							strong
+								display: block
+								text-align: center
+								margin-top: 18px
+								font:
+									family: $base-font-family
+									weight: 300
+									size: 18px
+								color: #5473be
+								
+							a
+								margin-top: 6px
+								display: block
+								text-align: center
+								font:
+									family: $base-font-family
+									weight: 300
+									size: 13px
+								color: #7a588e
+								text-decoration: none
+								
+								&:hover
+									text-decoration: underline
+						
+						.avatar
+							width: 81px
+							height: 81px
+							background: transparent url( '../img/sprite.png' ) no-repeat -66px 0
+							display: block
+							
+							img
+								width: 70px
+								height: 70px
+								@include border-radius( 50% )
+								margin: 0.25em 0 0 0.25em
+												
+						.twitter
+							background: transparent url( '../img/sprite.png' ) no-repeat 0 0
+							width: 64px
+							height: 21px
+							display: block
+							margin: 20px 0 0 5px
+							position: relative
+							cursor: pointer
+							
+							em
+								background: transparent url( '../img/sprite.png' ) no-repeat 0 -84px
+								display: block
+								width: 24px
+								height: 23px
+								position: absolute
+								top: 0
+								left: -2px
+								@include transition( left 0.5s ease-in-out )
+								
+							&.enabled
+								//@include transition( all 0.5s ease-in-out )
+								background: transparent url( '../img/sprite.png' ) no-repeat 0 -63px
+								
+								em
+									@include transition( left 0.5s ease-in-out )
+									background: transparent url( '../img/sprite.png' ) no-repeat -25px -84px
+									left: 45px
+						
+						.dribbble
+							background: transparent url( '../img/sprite.png' ) no-repeat 0 -21px
+							width: 64px
+							height: 21px
+							display: block
+							margin: 20px 0 0 5px
+							position: relative
+							cursor: pointer
+							
+							em
+								background: transparent url( '../img/sprite.png' ) no-repeat 0 -84px
+								display: block
+								width: 24px
+								height: 23px
+								position: absolute
+								top: 0
+								left: -2px
+								@include transition( left 0.5s ease-in-out )
+								
+							&.enabled
+								//@include transition( all 0.5s ease-in-out )
+								background: transparent url( '../img/sprite.png' ) no-repeat 0 -41px
+								
+								em
+									@include transition( left 0.5s ease-in-out )
+									background: transparent url( '../img/sprite.png' ) no-repeat -25px -84px
+									left: 45px
