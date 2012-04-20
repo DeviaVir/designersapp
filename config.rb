@@ -17,7 +17,6 @@ javascripts_dir = "assets/js"
 # line_comments = false
 
 preferred_syntax = :sass
-
 output_style = :expanded # by Fire.app 
 line_comments = false # by Fire.app 
 output_style = :expanded # by Fire.app 
