@@ -8,13 +8,20 @@ $( window ).load( function() {
 	
 	// Only show everything when the JS has loaded
 	$( 'body' ).css( 'visibility', 'visible' )
+
+	setTimeout(
+		function() {
+			$( 'header' ).css( 'display', 'none' )
+		}
+	, 3100 )
 	
+	$( '#main .designers ul' ).css( 'width', '200px' )
+
 	// Get all of the designers
 	$.post( url + 'nl/ajax', function(response) {
 		if( response.response ) {
 			$.each( response.persons, function() {
-				console.log( '+1 person' )		
-				console.log( this )		
+				$( '#main .designers ul' ).css( 'width', ( $( '#main .designers ul ' ).outerWidth()+200 ) + 'px' )
 				$( '<li />' )
 					.attr( 'id', 'designer-' + this.id )
 					.append(
@@ -44,7 +51,7 @@ $( window ).load( function() {
 							.append(
 								$( '<img />' )
 									.attr({
-										'src': this.avatar[0]
+										'src': this.avatar
 									})
 							)
 					)

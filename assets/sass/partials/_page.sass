@@ -16,11 +16,10 @@ body, select, input, textarea
 html, body
 	height: 100%
 
-body
+body 
 	margin: 0
 	padding: 0
 	background: #4163bd
-	visibility: hidden
 	
 	+animate( bounceInDown, 1s, 1s )
 	
@@ -56,6 +55,8 @@ body
 	
 header
 	padding: 100px 0
+	+animate( fadeInUp, 1s, 0.2s )
+	+animate( fadeOutUp, 1s, 3s )
 	
 	h1,
 	h3
@@ -77,14 +78,21 @@ header
 		margin-top: 15px
 
 #main
+	+animate( fadeInUp, 1s, 4.5s )
+
 	section
 		article
 			&.designers
-				width: 578px
+				padding: 100px 0 0
+				width: 275px
+				height: 180px
 				margin: 0 auto
+				-webkit-overflow-scrolling: touch
+				overflow-x: scroll
+				overflow-y: hidden
 				
 				ul
-					margin: 0
+					margin: 0 auto
 					padding: 0
 					list-style: none
 					position: relative
@@ -92,8 +100,8 @@ header
 					li
 						float: left
 						width: 100px
-						margin-right: 25px
-						margin-left: 25px
+						margin-right: 0
+						margin-left: 100px
 						position: relative
 						
 						&:last-child
